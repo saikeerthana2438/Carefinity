@@ -32,6 +32,9 @@ dependencies:
   flutter_gemini: ^3.0.0
   flutter:
     sdk: flutter
+
+  supabase_flutter: ^2.9.1
+  flutter_dotenv: ^5.2.1
   
   image_picker: ^1.1.2
   open_filex: ^4.7.0
@@ -61,7 +64,7 @@ dependencies:
 
   # Future Backend
   dio: ^5.7.0
-  supabase_flutter: ^2.5.8
+  
 
   # Forms
   form_validator: ^2.1.1
@@ -95,6 +98,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - .env
     - assets/images/
 
   # The following line ensures that the Material Icons font is

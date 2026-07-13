@@ -48,10 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (!mounted) return;
 
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(e.message),
-        backgroundColor: Colors.red,
-      ),
+      SnackBar(content: Text(e.message)),
     );
   } catch (e) {
     if (!mounted) return;
@@ -59,7 +56,6 @@ class _LoginScreenState extends State<LoginScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text("Something went wrong"),
-        backgroundColor: Colors.red,
       ),
     );
   }

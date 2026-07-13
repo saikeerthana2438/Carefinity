@@ -13,7 +13,7 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-
+  
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
