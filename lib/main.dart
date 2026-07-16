@@ -3,8 +3,9 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:provider/provider.dart';
-import 'voice_assistant/controllers/voice_controller.dart';
 
+import 'voice_assistant/controllers/voice_controller.dart';
+import 'features/women_health/providers/cycle_provider.dart';
 import 'app.dart';
 
 Future<void> main() async {
@@ -22,8 +23,11 @@ Future<void> main() async {
   );
 
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => VoiceController(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => VoiceController()),
+        ChangeNotifierProvider(create: (_) => CycleProvider()),
+      ],
       child: const CarefinityApp(),
     ),
   );
