@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../../core/widgets/women_health_card.dart';
 import '../../../../core/widgets/appointment_card.dart';
 import '../../../../core/widgets/doctor_card.dart';
 import '../../../../core/widgets/greeting_card.dart';
@@ -26,7 +27,7 @@ class HomeScreen extends StatelessWidget {
 
               SizedBox(height: 24),
 
-              const Text(
+              Text(
   "Carefinity Features",
   style: TextStyle(
     fontSize: 22,
@@ -38,9 +39,13 @@ class HomeScreen extends StatelessWidget {
 
               HealthSummaryCard(),
 
+              SizedBox(height: 24),
+
+              WomenHealthCard(),
+
               SizedBox(height: 28),
 
-              Text(
+            Text(
                 "Quick Actions",
                 style: TextStyle(
                   fontSize: 22,
