@@ -8,38 +8,36 @@ import '../../../../core/widgets/greeting_card.dart';
 import '../../../../core/widgets/health_summary_card.dart';
 import '../../../../core/widgets/health_tip_card.dart';
 import '../../../../core/widgets/quick_action_grid.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context)!;
+
     return Scaffold(
-      backgroundColor: const Color(0xffF5F7FB),
+      backgroundColor: const Color(0xFFF5F7FB),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 20,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
               GreetingCard(),
+            children: [
+              const GreetingCard(),
 
 SizedBox(height: 20),
 
 SearchBarWidget(),
 
-SizedBox(height: 24),
-
-              Text(
-  "Carefinity Features",
-  style: TextStyle(
-    fontSize: 22,
-    fontWeight: FontWeight.bold,
-  ),
-),
-
-              SizedBox(height: 16),
+const SizedBox(height: 28),
 
               HealthSummaryCard(),
 
@@ -47,19 +45,19 @@ SizedBox(height: 24),
 
               WomenHealthCard(),
 
-              SizedBox(height: 28),
+              const SizedBox(height: 30),
 
             Text(
-                "Quick Actions",
-                style: TextStyle(
+                t.quickActions,
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
-              QuickActionGrid(),
+              const QuickActionGrid(),
 
 SizedBox(height: 28),
 
@@ -75,49 +73,49 @@ SizedBox(height: 16),
 
 HealthChallengeCard(),
 
-SizedBox(height: 28),
+const SizedBox(height: 30),
 
 Text(
-  "Featured Doctors",
-  style: TextStyle(
+  t.topDoctors,
+  style: const TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.bold,
   ),
 ),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
-              DoctorCard(),
+              const DoctorCard(),
 
-              SizedBox(height: 28),
+              const SizedBox(height: 30),
 
               Text(
-                "Upcoming Appointment",
-                style: TextStyle(
+                t.upcomingAppointment,
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
-              AppointmentCard(),
+              const AppointmentCard(),
 
-              SizedBox(height: 28),
+              const SizedBox(height: 30),
 
               Text(
-                "Daily Health Tip",
-                style: TextStyle(
+                t.todaysHealthTip,
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
-              HealthTipCard(),
+              const HealthTipCard(),
 
-              SizedBox(height: 30),
+              const SizedBox(height: 40),
             ],
           ),
         ),
