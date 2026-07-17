@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'models/search_item.dart';
 
+import 'package:provider/provider.dart';
+
+import 'package:my_first_app/features/report_ai/providers/report_chat_provider.dart';
+import 'package:my_first_app/features/report_ai/screens/report_chat_screen.dart';
 // Import your screens
 import 'package:my_first_app/screens/doctor/doctor_screen.dart';
 import 'package:my_first_app/screens/diagnostics/diagnostics_screen.dart';
 import 'package:my_first_app/screens/diagnostics/diagnostic_booking_screen.dart';
 import 'package:my_first_app/screens/diagnostics/diagnostic_center_screen.dart';
 import 'package:my_first_app/screens/reports/reports_screen.dart';
-import 'package:my_first_app/screens/reports/report_analyzer_screen.dart';
+
 import 'package:my_first_app/screens/ai/ai_chat_screen.dart';
 import 'package:my_first_app/screens/medication/medication_screen.dart';
 import 'package:my_first_app/screens/profile/profile_screen.dart';
@@ -71,7 +75,10 @@ class SearchData {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (_) => const ReportAnalyzerScreen(),
+              builder: (_) => ChangeNotifierProvider(
+  create: (_) => ReportChatProvider(),
+  child: const ReportChatScreen(),
+)
             ),
           );
         },

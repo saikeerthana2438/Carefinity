@@ -28,26 +28,23 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
-              GreetingCard(),
-            children: [
               const GreetingCard(),
 
-SizedBox(height: 20),
+              const SizedBox(height: 20),
 
-SearchBarWidget(),
+              const SearchBarWidget(),
 
-const SizedBox(height: 28),
+              const SizedBox(height: 28),
 
-              HealthSummaryCard(),
+              const HealthSummaryCard(),
 
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
 
-              WomenHealthCard(),
+              const WomenHealthCard(),
 
               const SizedBox(height: 30),
 
-            Text(
+              Text(
                 t.quickActions,
                 style: const TextStyle(
                   fontSize: 22,
@@ -59,29 +56,29 @@ const SizedBox(height: 28),
 
               const QuickActionGrid(),
 
-SizedBox(height: 28),
+              const SizedBox(height: 28),
 
-Text(
-  "Health Challenges",
-  style: TextStyle(
-    fontSize: 22,
-    fontWeight: FontWeight.bold,
-  ),
-),
+              const Text(
+                "Health Challenges",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
-SizedBox(height: 16),
+              const SizedBox(height: 16),
 
-HealthChallengeCard(),
+              const HealthChallengeCard(),
 
-const SizedBox(height: 30),
+              const SizedBox(height: 30),
 
-Text(
-  t.topDoctors,
-  style: const TextStyle(
-    fontSize: 22,
-    fontWeight: FontWeight.bold,
-  ),
-),
+              Text(
+                t.topDoctors,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
               const SizedBox(height: 16),
 

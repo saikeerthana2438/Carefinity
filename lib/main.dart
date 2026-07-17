@@ -35,6 +35,9 @@ Future<void> main() async {
   MultiProvider(
     providers: [
       ChangeNotifierProvider(
+  create: (_) => LanguageProvider(),
+),
+      ChangeNotifierProvider(
         create: (_) => ChallengeProvider(),
       ),
       ChangeNotifierProvider(

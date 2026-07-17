@@ -20,7 +20,7 @@ class QuickActionGrid extends StatelessWidget {
       crossAxisCount: 2,
       crossAxisSpacing: 18,
       mainAxisSpacing: 18,
-      childAspectRatio: 1.7,
+      childAspectRatio: 0.90,
       children: [
         _QuickActionCard(
           title: lang.appointments,
@@ -104,68 +104,68 @@ class _QuickActionCard extends StatelessWidget {
             ],
           ),
           child: Padding(
-            padding: const EdgeInsets.all(18),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  height: 52,
-                  width: 52,
-                  decoration: BoxDecoration(
-                    color: color.withOpacity(0.12),
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Icon(
-                    icon,
-                    color: color,
-                    size: 28,
-                  ),
-                ),
+  padding: const EdgeInsets.all(18),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Container(
+        height: 52,
+        width: 52,
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.12),
+          borderRadius: BorderRadius.circular(14),
+        ),
+        child: Icon(
+          icon,
+          color: color,
+          size: 28,
+        ),
+      ),
 
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+      const SizedBox(height: 14),
 
-                    const SizedBox(height: 4),
+      Text(
+        title,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: theme.textTheme.titleMedium?.copyWith(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
 
-                    Text(
-                      subtitle,
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: Colors.grey.shade600,
-                      ),
-                    ),
+      const SizedBox(height: 4),
 
-                    const SizedBox(height: 10),
+      Expanded(
+        child: Text(
+          subtitle,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          style: theme.textTheme.bodySmall?.copyWith(
+            color: Colors.grey.shade600,
+          ),
+        ),
+      ),
 
-                    Row(
-                      children: [
-                        Text(
-                          "Open",
-                          style: TextStyle(
-                            color: color,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        const SizedBox(width: 4),
-                        Icon(
-                          Icons.arrow_forward_rounded,
-                          size: 18,
-                          color: color,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+      Row(
+        children: [
+          Text(
+            "Open",
+            style: TextStyle(
+              color: color,
+              fontWeight: FontWeight.w600,
             ),
           ),
+          const SizedBox(width: 4),
+          Icon(
+            Icons.arrow_forward_rounded,
+            size: 18,
+            color: color,
+          ),
+        ],
+      ),
+    ],
+  ),
+),
         ),
       ),
     );

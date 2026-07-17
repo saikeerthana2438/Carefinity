@@ -1,5 +1,10 @@
 import 'dart:io';
 
+import 'package:provider/provider.dart';
+
+import '../../features/report_ai/providers/report_chat_provider.dart';
+import '../../features/report_ai/screens/report_chat_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -7,7 +12,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../l10n/app_localizations.dart';
 import '../../models/report_model.dart';
 import '../../services/report_service.dart';
-import 'report_analyzer_screen.dart';
+
 
 class ReportsScreen extends StatefulWidget {
   const ReportsScreen({super.key});
@@ -476,17 +481,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
   ),
 );
 }
-                              if (value == "analyze") {
-                                if (!mounted) return;
-
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) =>
-                                        const ReportAnalyzerScreen(),
-                                  ),
-                                );
-                              }
+                            
 
                               if (value == "delete") {
                                 await _reportService.deleteReport(
