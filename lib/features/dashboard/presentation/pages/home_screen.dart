@@ -1,5 +1,7 @@
+import '../../../../core/widgets/health_challenge_card.dart';
 import 'package:flutter/material.dart';
-
+import 'package:my_first_app/features/search/widgets/search_bar_widget.dart';
+import '../../../../core/widgets/women_health_card.dart';
 import '../../../../core/widgets/appointment_card.dart';
 import '../../../../core/widgets/doctor_card.dart';
 import '../../../../core/widgets/greeting_card.dart';
@@ -26,15 +28,26 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
+              GreetingCard(),
+            children: [
               const GreetingCard(),
 
-              const SizedBox(height: 28),
+SizedBox(height: 20),
 
-              const HealthSummaryCard(),
+SearchBarWidget(),
+
+const SizedBox(height: 28),
+
+              HealthSummaryCard(),
+
+              SizedBox(height: 24),
+
+              WomenHealthCard(),
 
               const SizedBox(height: 30),
 
-              Text(
+            Text(
                 t.quickActions,
                 style: const TextStyle(
                   fontSize: 22,
@@ -46,15 +59,29 @@ class HomeScreen extends StatelessWidget {
 
               const QuickActionGrid(),
 
-              const SizedBox(height: 30),
+SizedBox(height: 28),
 
-              Text(
-                t.topDoctors,
-                style: const TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+Text(
+  "Health Challenges",
+  style: TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+  ),
+),
+
+SizedBox(height: 16),
+
+HealthChallengeCard(),
+
+const SizedBox(height: 30),
+
+Text(
+  t.topDoctors,
+  style: const TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+  ),
+),
 
               const SizedBox(height: 16),
 

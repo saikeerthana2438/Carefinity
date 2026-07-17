@@ -1,3 +1,4 @@
+import 'package:my_first_app/services/report_ai_service.dart';
 import 'dart:io';
 
 import 'package:path/path.dart' as path;
@@ -5,6 +6,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ReportService {
   final SupabaseClient _supabase = Supabase.instance.client;
+  final ReportAIService _reportAIService = ReportAIService();
 
   static const String bucket = 'medical-reports';
 
@@ -45,6 +47,11 @@ class ReportService {
       'report_date': reportDate.toIso8601String().split('T')[0],
       'file_url': fileName,
     });
+
+    final extractedValues =
+    await _reportAIService.extractReportValues(file);
+
+print(extractedValues);
   }
 
   // =======================

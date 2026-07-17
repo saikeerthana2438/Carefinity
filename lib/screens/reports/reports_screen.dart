@@ -465,6 +465,17 @@ class _ReportsScreenState extends State<ReportsScreen> {
                                 );
                               }
 
+            if (value == "analyze") {
+  Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (_) => ChangeNotifierProvider(
+      create: (_) => ReportChatProvider(),
+      child: const ReportChatScreen(),
+    ),
+  ),
+);
+}
                               if (value == "analyze") {
                                 if (!mounted) return;
 
