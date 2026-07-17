@@ -1,6 +1,6 @@
-
+import '../../../../core/widgets/health_challenge_card.dart';
 import 'package:flutter/material.dart';
-
+import 'package:my_first_app/features/search/widgets/search_bar_widget.dart';
 import '../../../../core/widgets/appointment_card.dart';
 import '../../../../core/widgets/doctor_card.dart';
 import '../../../../core/widgets/greeting_card.dart';
@@ -20,13 +20,17 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
 
               GreetingCard(),
 
-              SizedBox(height: 24),
+SizedBox(height: 20),
 
-              const Text(
+SearchBarWidget(),
+
+SizedBox(height: 24),
+
+              Text(
   "Carefinity Features",
   style: TextStyle(
     fontSize: 22,
@@ -52,15 +56,29 @@ class HomeScreen extends StatelessWidget {
 
               QuickActionGrid(),
 
-              SizedBox(height: 28),
+SizedBox(height: 28),
 
-              Text(
-                "Featured Doctors",
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+Text(
+  "Health Challenges",
+  style: TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+  ),
+),
+
+SizedBox(height: 16),
+
+HealthChallengeCard(),
+
+SizedBox(height: 28),
+
+Text(
+  "Featured Doctors",
+  style: TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+  ),
+),
 
               SizedBox(height: 16),
 

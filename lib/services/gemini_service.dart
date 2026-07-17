@@ -1,6 +1,11 @@
+import 'dart:convert';
+
+
 import 'package:flutter_gemini/flutter_gemini.dart';
 
 class GeminiService {
+
+  // Chat AI
   Future<String> getHealthResponse(String prompt) async {
     try {
       final response = await Gemini.instance.text(
@@ -23,4 +28,7 @@ $prompt
       return "Error: $e";
     }
   }
+
+  // Medical Report AI
+  
 }

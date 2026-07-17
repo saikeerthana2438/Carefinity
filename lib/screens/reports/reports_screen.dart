@@ -1,6 +1,7 @@
 import 'package:url_launcher/url_launcher.dart';
-import 'report_analyzer_screen.dart';
-
+import '../../features/report_ai/screens/report_chat_screen.dart';
+import 'package:provider/provider.dart';
+import '../../features/report_ai/providers/report_chat_provider.dart';
 import '../../models/report_model.dart';
 import '../../services/report_service.dart';
 import 'dart:io';
@@ -349,11 +350,14 @@ await launchUrl(
 
             if (value == "analyze") {
   Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (_) => const ReportAnalyzerScreen(),
+  context,
+  MaterialPageRoute(
+    builder: (_) => ChangeNotifierProvider(
+      create: (_) => ReportChatProvider(),
+      child: const ReportChatScreen(),
     ),
-  );
+  ),
+);
 }
 
             if (value == "delete") {

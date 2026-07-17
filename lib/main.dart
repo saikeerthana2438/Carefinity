@@ -3,6 +3,11 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'package:provider/provider.dart';
+
+import 'features/health_challenges/providers/challenge_provider.dart';
+import 'features/health_challenges/providers/health_points_provider.dart';
+
 import 'app.dart';
 
 Future<void> main() async {
@@ -18,5 +23,17 @@ Future<void> main() async {
     anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
   );
 
-  runApp(const CarefinityApp());
+  runApp(
+  MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (_) => ChallengeProvider(),
+      ),
+      ChangeNotifierProvider(
+        create: (_) => HealthPointsProvider(),
+      ),
+    ],
+    child: const CarefinityApp(),
+  ),
+);
 }
