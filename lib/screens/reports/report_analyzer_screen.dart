@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../l10n/app_localizations.dart';
 import '../../services/report_ai_service.dart';
 
 class ReportAnalyzerScreen extends StatefulWidget {
@@ -10,23 +11,22 @@ class ReportAnalyzerScreen extends StatefulWidget {
       _ReportAnalyzerScreenState();
 }
 
-class _ReportAnalyzerScreenState
-    extends State<ReportAnalyzerScreen> {
-
+class _ReportAnalyzerScreenState extends State<ReportAnalyzerScreen> {
   final ReportAIService _service = ReportAIService();
 
   final TextEditingController reportController =
       TextEditingController();
 
   String result = "";
-
   bool isLoading = false;
 
   Future<void> analyze() async {
+    final t = AppLocalizations.of(context)!;
+
     if (reportController.text.trim().isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text("Please paste the report text."),
+        SnackBar(
+          content: Text(t.pasteReportText),
         ),
       );
       return;
@@ -40,9 +40,11 @@ class _ReportAnalyzerScreenState
       reportController.text.trim(),
     );
 
-    setState(() {
-      isLoading = false;
-    });
+    if (mounted) {
+      setState(() {
+        isLoading = false;
+      });
+    }
   }
 
   @override
@@ -53,17 +55,18 @@ class _ReportAnalyzerScreenState
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text("AI Report Analyzer"),
+        title: Text(t.aiReportAnalyzer),
       ),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
-
-          const Text(
-            "Paste Medical Report",
-            style: TextStyle(
+          Text(
+            t.pasteMedicalReport,
+            style: const TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
@@ -74,10 +77,9 @@ class _ReportAnalyzerScreenState
           TextField(
             controller: reportController,
             maxLines: 12,
-            decoration: const InputDecoration(
-              hintText:
-                  "Paste your blood report, prescription or medical report here...",
-              border: OutlineInputBorder(),
+            decoration: InputDecoration(
+              hintText: t.reportHint,
+              border: const OutlineInputBorder(),
             ),
           ),
 
@@ -86,7 +88,11 @@ class _ReportAnalyzerScreenState
           FilledButton.icon(
             onPressed: isLoading ? null : analyze,
             icon: const Icon(Icons.auto_awesome),
-            label: const Text("Analyze Report"),
+            label: Text(
+              isLoading
+                  ? t.analyzing
+                  : t.analyzeReport,
+            ),
           ),
 
           const SizedBox(height: 30),
@@ -97,9 +103,9 @@ class _ReportAnalyzerScreenState
             ),
 
           if (result.isNotEmpty) ...[
-            const Text(
-              "AI Analysis",
-              style: TextStyle(
+            Text(
+              t.aiAnalysis,
+              style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
@@ -112,7 +118,9 @@ class _ReportAnalyzerScreenState
                 padding: const EdgeInsets.all(16),
                 child: SelectableText(
                   result,
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
                 ),
               ),
             ),

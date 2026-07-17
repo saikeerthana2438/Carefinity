@@ -1,0 +1,119 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Carefinity",
+
+  "welcome": "Welcome",
+  "login": "Login",
+  "signUp": "Sign Up",
+
+  "home": "Home",
+  "profile": "Profile",
+  "appointments": "Appointments",
+  "diagnostics": "Diagnostics",
+  "reports": "Reports",
+  "medicines": "Medicines",
+
+  "settings": "Settings",
+  "logout": "Logout",
+  "cancel": "Cancel",
+  "save": "Save",
+  "ok": "OK",
+
+  "loggedInAs": "Logged in as",
+  "unknownUser": "Unknown User",
+
+  "familyProfiles": "Family Profiles",
+  "manageFamilyMembers": "Manage family members",
+
+  "appointmentHistory": "Appointment History",
+  "diagnosticHistory": "Diagnostic History",
+
+  "noAppointments": "No appointments found.",
+  "noDiagnostics": "No diagnostic bookings found.",
+
+  "language": "Language",
+  "selectLanguage": "Select Language",
+
+  "english": "English",
+  "hindi": "हिन्दी",
+  "telugu": "తెలుగు",
+
+  "goodMorning": "Good Morning 👋",
+  "welcomeToCarefinity": "Welcome to Carefinity",
+  "homeDescription": "Track your health, consult doctors, book diagnostics, and get AI-powered assistance—all in one place.",
+
+  "quickActions": "Quick Actions",
+  "topDoctors": "Top Doctors",
+  "upcomingAppointment": "Upcoming Appointment",
+  "todaysHealthTip": "Today's Health Tip",
+
+  "consultSpecialists": "Consult Specialists",
+  "bookLabTests": "Book Lab Tests",
+  "healthGuidance": "Health Guidance",
+  "medicineReminders": "Medication Reminders",
+  "medicalReports": "Medical Reports",
+
+  "open": "Open",
+  "call": "Call",
+  "viewDetails": "View Details",
+
+  "tomorrow": "Tomorrow",
+  "medicalCenter": "Carefinity Medical Center",
+  "cardiologist": "Cardiologist",
+
+  "fillAllFields": "Please fill all fields.",
+  "medicationAdded": "Medication added successfully.",
+
+  "medicationReminder": "Medication Reminder",
+  "medicineName": "Medicine Name",
+  "dosage": "Dosage",
+  "dosageHint": "e.g. 500 mg",
+  "frequency": "Frequency",
+  "startDate": "Start Date",
+  "endDate": "End Date",
+  "addMedication": "Add Medication",
+  "yourMedications": "Your Medications",
+  "noMedications": "No medications added.",
+
+  "aiAssistant": "AI Assistant",
+  "askHealthQuestions": "Ask health questions",
+
+  "healthLocker": "Health Locker",
+
+  "bookDoctors": "Book Doctors",
+
+  "family": "Family",
+  "manageMembers": "Manage Members",
+  "selected": "Selected",
+"selectReport": "Please select a report.",
+"reportUploaded": "Report uploaded successfully.",
+"uploadNewReport": "Upload New Report",
+"chooseReport": "Choose Report",
+"reportName": "Report Name",
+"hospitalName": "Hospital Name",
+"reportType": "Report Type",
+"uploadReport": "Upload Report",
+"uploading": "Uploading...",
+"uploadedReports": "Uploaded Reports",
+"digitalHealthLocker": "Digital Health Locker",
+"digitalHealthLockerDescription": "Securely upload, organize and access all your medical reports in one place.",
+"confirmed": "Confirmed",
+"pending": "Pending",
+"completed": "Completed",
+"cancelled": "Cancelled"
+,
+"healthLockerDescription": "Securely upload, organize and access all your medical reports in one place.",
+"noReports": "No reports uploaded yet.",
+"noReportsDescription": "Upload your first medical report to securely store it here.",
+"view": "View",
+"analyzeWithAi": "Analyze with AI",
+"delete": "Delete",
+"aiReportAnalyzer": "AI Report Analyzer",
+"pasteMedicalReport": "Paste Medical Report",
+"pasteReportText": "Please paste the report text.",
+"reportHint": "Paste your blood report, prescription or medical report here...",
+"analyzeReport": "Analyze Report",
+"analyzing": "Analyzing...",
+"aiAnalysis": "AI Analysis"
+}

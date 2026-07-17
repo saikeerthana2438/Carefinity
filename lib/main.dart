@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:provider/provider.dart';
-import 'voice_assistant/controllers/voice_controller.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'app.dart';
+import 'providers/language_provider.dart';
+import 'voice_assistant/controllers/voice_controller.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,8 +23,15 @@ Future<void> main() async {
   );
 
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => VoiceController(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => VoiceController(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => LanguageProvider(),
+        ),
+      ],
       child: const CarefinityApp(),
     ),
   );

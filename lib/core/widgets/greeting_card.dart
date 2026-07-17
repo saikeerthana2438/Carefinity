@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../l10n/app_localizations.dart';
 
 class GreetingCard extends StatelessWidget {
   const GreetingCard({super.key});
@@ -6,6 +7,7 @@ class GreetingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final lang = AppLocalizations.of(context)!;
 
     return Container(
       width: double.infinity,
@@ -35,14 +37,14 @@ class GreetingCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Good Morning 👋",
+                  lang.goodMorning,
                   style: theme.textTheme.titleMedium?.copyWith(
                     color: Colors.white70,
                   ),
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  "Welcome to Carefinity",
+                  lang.welcomeToCarefinity,
                   style: theme.textTheme.headlineSmall?.copyWith(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -50,7 +52,7 @@ class GreetingCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  "Track your health, consult doctors, book diagnostics, and get AI-powered assistance—all in one place.",
+                  lang.homeDescription,
                   style: theme.textTheme.bodyMedium?.copyWith(
                     color: Colors.white.withOpacity(0.9),
                     height: 1.5,
