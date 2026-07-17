@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-
 import 'package:provider/provider.dart';
+
 
 import 'features/health_challenges/providers/challenge_provider.dart';
 import 'features/health_challenges/providers/health_points_provider.dart';
 
+import 'voice_assistant/controllers/voice_controller.dart';
+import 'features/women_health/providers/cycle_provider.dart';
 import 'app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await dotenv.load(fileName: ".env");
+
   Gemini.init(
     apiKey: dotenv.env['GEMINI_API_KEY']!,
   );
@@ -32,8 +35,13 @@ Future<void> main() async {
       ChangeNotifierProvider(
         create: (_) => HealthPointsProvider(),
       ),
+      ChangeNotifierProvider(
+        create: (_) => VoiceController(),
+      ),
+      ChangeNotifierProvider(
+        create: (_) => CycleProvider(),
+      ),
     ],
     child: const CarefinityApp(),
   ),
 );
-}

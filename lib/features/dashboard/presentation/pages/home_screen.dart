@@ -1,6 +1,7 @@
 import '../../../../core/widgets/health_challenge_card.dart';
 import 'package:flutter/material.dart';
 import 'package:my_first_app/features/search/widgets/search_bar_widget.dart';
+import '../../../../core/widgets/women_health_card.dart';
 import '../../../../core/widgets/appointment_card.dart';
 import '../../../../core/widgets/doctor_card.dart';
 import '../../../../core/widgets/greeting_card.dart';
@@ -42,9 +43,13 @@ SizedBox(height: 24),
 
               HealthSummaryCard(),
 
+              SizedBox(height: 24),
+
+              WomenHealthCard(),
+
               SizedBox(height: 28),
 
-              Text(
+            Text(
                 "Quick Actions",
                 style: TextStyle(
                   fontSize: 22,
