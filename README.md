@@ -413,6 +413,19 @@ Carefinity supports multiple languages, making the application easier to use for
 
 ---
 
+# blood donors
+
+- It connects with the blood donors in emergency situations
+- it sends a notification to the donor based on the required blood group
+
+---
+
+# Organ donor 
+
+- In the same way it connects to the organ donors as well
+
+---
+
 # 📂 Project Structure
 
 ```
