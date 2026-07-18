@@ -329,11 +329,33 @@ Carefinity is designed to evolve into a complete digital healthcare ecosystem.
 
 ---
 
-## 🌍 Access the app in multiple languages
+## 💊 Nearby Pharmacy Integration
 
-Healthcare should be accessible to everyone.
+- Connect with Nearby Pharmacies
+- Real-Time Medicine Availability
+- Online Medicine Ordering
+- Fast Home Delivery
+- Medicine Price Comparison
 
-Carefinity supports multiple languages, making the application easier to use for users from different regions and language backgrounds.
+---
+
+## 🩸 Blood Donor Network
+
+- Connect with Nearby Blood Donors
+- Search by Blood Group
+- Emergency Blood Requests
+- Instant Donor Notifications
+- Hospital Blood Bank Integration
+
+---
+
+## ❤️ Organ Donor Connectivity
+
+- Organ Donor Registration
+- Connect with Authorized Organizations
+- Organ Donation Awareness
+- Donor Eligibility Information
+- Secure Donor-Hospital Communication
 
 ---
 
@@ -413,16 +435,12 @@ Carefinity supports multiple languages, making the application easier to use for
 
 ---
 
-# blood donors
+## 🥗 Personalized Health Recommendations
 
-- It connects with the blood donors in emergency situations
-- it sends a notification to the donor based on the required blood group
-
----
-
-# Organ donor 
-
-- In the same way it connects to the organ donors as well
+- AI Diet Plans
+- Personalized Exercise Plans
+- Lifestyle Improvement Suggestions
+- Daily Wellness Tips
 
 ---
 
